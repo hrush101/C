@@ -8,10 +8,10 @@ void second(int num);
 
 //                                                    Functions
 
-//             Functions are small computing tasks which helps to split a complex computing problem into small components 
-//             which will solve a bigger problem in divide and conquer way 
-//             functions can be used (n) times which makes them reusable for similar tasks 
-//             functions may or maynot recive values and may or maynot return the values after computing it 
+//  Functions are small computing tasks which helps to split a complex computing problem into small components 
+//  which will solve a bigger problem in divide and conquer way 
+//  functions can be used (n) times which makes them reusable for similar tasks 
+//  functions may or maynot recive values and may or maynot return the values after computing it 
 
 //  before we define a function we declare it.
 //  syntax to write a function declaration 
