@@ -17,13 +17,41 @@
 //     arr[3]=4 ;
 //     arr[4]=5 ;
 
+int length (int *ptr , int size) ;
+
+// calculate lenght of array
+int  length (int *ptr , int size ) {
+
+   int len=0;
+   return len = size / sizeof(ptr[0]); 
+   
+   // size is total size of array / size of one int element which is 4 bytes
+   // so if total size is 16 bytes then 16 / 4 = 4
+   
+   
+}
+
 int main(){
 
-   int a[4] = {1,2,3,4}; // this is single dimentional array only contains 1 row and many coloumns
-   int size = sizeof(a) / sizeof(a[0]);
-   for (int i = 0; i < size; i++)
+   int a[] = {1,2,3,4}; // this is single dimentional array only contains 1 row and many coloumns
+
+   for (int i = 0; i < length(a,sizeof(a)) ; i++)
    {
-      printf("%d is element of array at index : %d ",a[i],i);
+      printf("%d is element of array at index : %d \n ",a[i],i);
    }
    
+
+   // static array with size already defined
+   int b[10];
+
+   printf(" enter 10 elements - \n ");
+      
+   for (int i = 0; i < 10 ; i++)
+   {
+      printf("enter the %dth element : " ,i+1);
+      scanf("%d", &b[i]);
+   }
+
+   
+
 }

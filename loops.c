@@ -17,7 +17,8 @@ for(int i=0 ; i < 10 ; i++ ) {
 }
 
 // 2. While loop 
-// when the number of iterations are not known basically the loop will iterate until the conditon is true so when the condition becomes false at run time it
+// when the number of iterations are not known basically the loop will iterate until the conditon is true 
+// so when the condition becomes false it will break
 
 printf("While Loop \n");
 printf("enter a var between 1-10 : " );
@@ -32,7 +33,8 @@ while (a < n ) {
 printf("\n");
 
 // 3. do while 
-// if the conditon is true / false in first go the loop will still execute as the condion is checked after the do is executed 
+// if the conditon is true / false in first go the loop will still execute as the condition is checked after the do is executed
+
 printf(" Do While Loop \n");
 do {
     printf("no justice for wrong things in do while \n");
