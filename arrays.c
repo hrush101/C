@@ -54,7 +54,13 @@
 //            it initializes memory with zero that is by default after allocation each block contains zero value
 //            returns a void pointer pointing to allocated memory or return null if it fails to allocate
 
-//  syntax - int *ptr = (int *)malloc(length , sizeof(int));
+//  syntax - int *ptr = (int *)calloc(length , sizeof(int));
+
+// Realloc - use to resize previously allocated memory ( dynamic memory)
+//         - it is used when you need to resize a allocated array of 10 integers but now reduce it to 5
+//         - it allows resizing of memory blocks at runtime, either to increase or decrease their size
+
+//  syntax - int *ptr = (int *)realloc(,array , length * sizeof(int));
 
 
 int length (int *ptr , int size) ;
@@ -101,6 +107,6 @@ int main(){
    }
    
    
-
+   
 
 }
