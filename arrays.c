@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+#include <stdlib.h>
 //                                             Arrays
 //  Arrays are collection of elements of same data types stored in contiguous memory location ( one after another )
 //  integer array address ex - [ 1000 | 1004 | 1008 | 1012 ] as integer variable is of 4 bytes each
@@ -34,7 +34,7 @@
 //  1. Static array - In static array size is already known at compile time and is fixed cannot be increased / decreased at run time
 
 //  2. Dynamic array - In dynamic array memory is allocated at run time and can be increased / decreased at run time
-//                   - Memory of dynamic array is allocated using library functions like :
+//                   - Memory of dynamic array is allocated using <stdlib.h> library functions like :
 //                     1. malloc()
 //                     2. calloc()
 //                     3. realloc()
@@ -50,17 +50,24 @@
 //           where 'length' is the number of blocks or length of an array
 //           we type casted here because malloc returns a void pointer and our array is of type integer so we need a pointer of of type integer
 
-// Calloc() - allocates block of memory of specified size ,
+//  Calloc() - allocates block of memory of specified size ,
 //            it initializes memory with zero that is by default after allocation each block contains zero value
 //            returns a void pointer pointing to allocated memory or return null if it fails to allocate
 
 //  syntax - int *ptr = (int *)calloc(length , sizeof(int));
 
-// Realloc - use to resize previously allocated memory ( dynamic memory)
+//  Realloc - use to resize previously allocated memory ( dynamic memory)
 //         - it is used when you need to resize a allocated array of 10 integers but now reduce it to 5
 //         - it allows resizing of memory blocks at runtime, either to increase or decrease their size
 
-//  syntax - int *ptr = (int *)realloc(,array , length * sizeof(int));
+//  syntax - int *ptr = (int *)realloc( array , length * sizeof(int));
+
+
+//  Free()  - Deallocates previously allocated memory 
+//         - prevents from memory leak
+
+//  syntax - free(ptr);
+
 
 
 int length (int *ptr , int size) ;
@@ -76,6 +83,21 @@ int  length (int *ptr , int size ) {
    
    
 }
+
+int linear_search( int *arr , int size , int num );
+
+int linear_search( int *arr , int size , int num ){
+
+   for(int i=0;i<size;i++){
+      if(*( arr + i ) == num ){
+         return 1;
+      }
+   }
+   
+   return 0;  
+}
+
+
 
 int main(){
 
@@ -94,7 +116,7 @@ int main(){
       
    for (int i = 0; i < 10 ; i++)
    {
-      printf("enter the %dth element : " ,i+1);
+      printf("enter the %dth element : \n" ,i);
       scanf("%d", &b[i]);
    }
 
@@ -107,6 +129,42 @@ int main(){
    }
    
    
-   
+   // Dynamic array 
 
+   int *ptr;
+   int size;
+   int num;
+   
+   printf("How many number you want to enter : \n");
+   scanf("%d",&size);
+
+   ptr=(int *)malloc(size * sizeof(int));
+   
+   for(int i=0;i<size;i++)
+   {
+     printf("enter the number : \n");
+     scanf("%d", ptr + i ); // or you can do (ptr + i)
+   }
+   
+   printf("entered numbers are : \n");
+
+   for(int i=0;i<size;i++)
+   {
+     printf("%d \n",*(ptr + i));
+   }
+
+   free(ptr);
+   ptr=NULL;
+
+   // search element in array
+   printf("enter the number you want to enter : \n");
+   scanf("%d",&num);
+   int check =linear_search(ptr,size ,num);
+   
+   if (check == 1){
+      printf("Entered number exists : \n");
+   }
+   else {
+      printf("Entered number not found : \n");
+   }
 }

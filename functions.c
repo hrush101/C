@@ -80,7 +80,7 @@ int sum (int a,int b) // these are formal parameters which are copy of actual pa
 
 // the memory address of variables are passed to the function , instead of passing the variable's actual value as copy
 // this allows the function to access/modify actual variables 
-// the address are catched / pointed by a pointers as a function parameters
+// the address are catched / pointed by pointers as a function parameters
 // the function's parameter is defined as a pointer ex -void fun (int *a, int *b) , these pointers stores the memory address of the variable
 
 // Ex -
