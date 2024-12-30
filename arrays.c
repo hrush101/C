@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 //                                             Arrays
 //  Arrays are collection of elements of same data types stored in contiguous memory location ( one after another )
@@ -71,6 +71,8 @@
 
 
 int length (int *ptr , int size) ;
+int linear_search( int *arr , int size , int num );
+
 
 // calculate length of static array
 int  length (int *ptr , int size ) {
@@ -84,7 +86,7 @@ int  length (int *ptr , int size ) {
    
 }
 
-int linear_search( int *arr , int size , int num );
+
 
 int linear_search( int *arr , int size , int num ){
 
@@ -153,18 +155,22 @@ int main(){
      printf("%d \n",*(ptr + i));
    }
 
-   free(ptr);
-   ptr=NULL;
-
    // search element in array
    printf("enter the number you want to enter : \n");
    scanf("%d",&num);
-   int check =linear_search(ptr,size ,num);
+   int check = linear_search( ptr , size , num);
    
    if (check == 1){
-      printf("Entered number exists : \n");
+      printf("Entered number exists in array \n");
    }
    else {
-      printf("Entered number not found : \n");
+      printf("Entered number not found  \n");
    }
+
+   free(ptr);
+   ptr=NULL;
+
+
+   return 0;
+   
 }

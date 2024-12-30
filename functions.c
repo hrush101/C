@@ -169,6 +169,7 @@ void second(int num){
 // 2. used for temporary purpose example use of 'i' in for loop - for (int i = 0 ; i<n ; i++)
 // 3. memory is created in stack
 
+// Best explain nation of stack and heap memory - https://youtu.be/_8-ht2AKyH4?si=Oa5rUGCwWuvoKWpQ
 
 // +-----------------------------------------------------+
 // |                    Program Code                     |
