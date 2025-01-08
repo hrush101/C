@@ -16,6 +16,7 @@
 //   |  0
 
 int *ptr=NULL;
+int *bits=NULL;
 
 int binary_array_length(int num);
 int * to_binary(int num);
@@ -121,7 +122,7 @@ int main(){
     printf("Enter the size of binary number : ");
     scanf("%d",&size);
 
-    int *bits=(int *)malloc( size * sizeof(int));
+    bits=(int *)malloc( size * sizeof(int));
     
     printf("Enter the binary bits 1s and 0s space separated : ");
 
@@ -132,14 +133,14 @@ int main(){
 
     int result=to_decimal(bits , size);
     
-    printf("Entered binary No. ");
+    printf("Entered binary No - ");
 
     for (int i = 0; i < size; i++)
     {
         printf("%d %c", *(bits + i) ,' ');
     }
     
-    printf("to Decimal is %d : " , result);
+    printf("to Decimal is : %d  " , result);
     printf("\n");
 
     free(bits);
