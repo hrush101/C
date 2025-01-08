@@ -92,6 +92,7 @@ int to_decimal(int * num ,int size){
 
 int main(){
     
+    // Decimal to Binary
 
     int decimal=0,size=0;
 
@@ -115,6 +116,8 @@ int main(){
     printf("\n");
     printf("\n");
     
+    // Binary to Decimal 
+
     printf("Enter the size of binary number : ");
     scanf("%d",&size);
 
